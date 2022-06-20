@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GenericsProgram
 {
-    public class FindMaximum
+    public class FindMaximum<T> where T : IComparable
     {
-        public void MaximumInteger(int firstValue, int secondValue, int thirdValue)
+        public void MaximumValue(T firstValue, T secondValue, T thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
                 firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
@@ -28,46 +28,66 @@ namespace GenericsProgram
             }
 
         }
-        public void MaximumFloat (double firstValue, double secondValue, double thirdValue)
-        {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
-                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
-                firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
-            {
-                Console.WriteLine("First Value {0} is greatest of all ", firstValue);
-            }
-            if (secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) > 0 ||
-                secondValue.CompareTo(thirdValue) >= 0 && secondValue.CompareTo(firstValue) > 0 ||
-                secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) >= 0)
-            {
-                Console.WriteLine("Second Value {0} is greatest of all ", secondValue);
-            }
-            else
-            {
-                Console.WriteLine("Third Value {0} is greatest of all ", thirdValue);
-            }
+        //public void MaximumInteger(int firstValue, int secondValue, int thirdValue)
+        //{
+        //    if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
+        //        firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
+        //        firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
+        //    {
+        //        Console.WriteLine("First Value {0} is greatest of all ", firstValue);
+        //    }
+        //    if (secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) > 0 ||
+        //        secondValue.CompareTo(thirdValue) >= 0 && secondValue.CompareTo(firstValue) > 0 ||
+        //        secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) >= 0)
+        //    {
+        //        Console.WriteLine("Second Value {0} is greatest of all ", secondValue);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Third Value {0} is greatest of all ", thirdValue);
+        //    }
 
-        }
-        public void MaximumString(string firstValue, string secondValue, string thirdValue)
-        {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
-                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
-                firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
-            {
-                Console.WriteLine("First Value {0} is greatest of all ", firstValue);
-            }
-            if (secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) > 0 ||
-                secondValue.CompareTo(thirdValue) >= 0 && secondValue.CompareTo(firstValue) > 0 ||
-                secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) >= 0)
-            {
-                Console.WriteLine("Second Value {0} is greatest of all ", secondValue);
-            }
-            else
-            {
-                Console.WriteLine("Third Value {0} is greatest of all ", thirdValue);
-            }
+        //}
+        //public void MaximumFloat (double firstValue, double secondValue, double thirdValue)
+        //{
+        //    if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
+        //        firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
+        //        firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
+        //    {
+        //        Console.WriteLine("First Value {0} is greatest of all ", firstValue);
+        //    }
+        //    if (secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) > 0 ||
+        //        secondValue.CompareTo(thirdValue) >= 0 && secondValue.CompareTo(firstValue) > 0 ||
+        //        secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) >= 0)
+        //    {
+        //        Console.WriteLine("Second Value {0} is greatest of all ", secondValue);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Third Value {0} is greatest of all ", thirdValue);
+        //    }
 
-        }
+        //}
+        //public void MaximumString(string firstValue, string secondValue, string thirdValue)
+        //{
+        //    if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
+        //        firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
+        //        firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
+        //    {
+        //        Console.WriteLine("First Value {0} is greatest of all ", firstValue);
+        //    }
+        //    if (secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) > 0 ||
+        //        secondValue.CompareTo(thirdValue) >= 0 && secondValue.CompareTo(firstValue) > 0 ||
+        //        secondValue.CompareTo(thirdValue) > 0 && secondValue.CompareTo(firstValue) >= 0)
+        //    {
+        //        Console.WriteLine("Second Value {0} is greatest of all ", secondValue);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Third Value {0} is greatest of all ", thirdValue);
+        //    }
+
+        //}
 
     }
 }
